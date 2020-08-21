@@ -1,0 +1,37 @@
+.container-principal{
+    height: 600px;
+}
+
+.contato{
+    background-color: #484b4e;
+    height: 90px;
+}
+
+.titulo-contato{
+    color:#b6851b;
+    width: 100%;
+    font-weight: bold;
+}
+
+.data-contato{
+    color:white;
+    width: 100%;
+}
+
+footer{
+    text-align: center;
+    padding:20px;
+    background-color:#f0f4f5;
+}
+
+.container-funcionarios{
+    margin-top:20px;
+}
+
+.td-btn{
+    width: 10px;
+}
+
+.td-codigo{
+    width: 50px;
+}
