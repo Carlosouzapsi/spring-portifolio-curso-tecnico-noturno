@@ -38,39 +38,60 @@
 
 
     <!--CONTEÚDO-->
-    <div class="container container-funcionarios">
-		<div class="bg-dark frm-titulo">
-            <h3>Funcionários</h3>
-        </div>
-
-        <div class="btn-novo">
-            <button class="btn btn-outline-success"
-                th:href="@{/funcionario/add}"
-                onclick="window.location.href='./add'">
-                <i class="fa fa-plus-circle"></i> Novo
-            </button>
-        </div>
+    <div class="container container-funcionario">
         
+		<div class="bg-dark frm-titulo">
+            <h3>Funcionário</h3>
+        </div>
 
-        <table class="table">
-            <thead class="table-dark">  
-                <tr>
-                    <th>Código</th>
-                    <th>Nome</th>
-                    <th colspan="4">Cargo</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr th:each="funcionario: ${funcionarios}">
-                    <td class="td-codigo" th:text="${funcionario.id}"></td>
-                    <td th:text="${funcionario.nome}"></td>
-                    <td th:text="${funcionario.cargo}"></td>
-                    <td class="td-btn"><a th:href="@{'/funcionario/view/'+${funcionario.id}}"><i class="fa fa-eye cl-fa"></i></a></i></td>
-                    <td class="td-btn"><a th:href="@{'/funcionario/edit/'+${funcionario.id}}"><i class="fa fa-edit cl-fa"></i></a></i></td>
-                    <td class="td-btn"><a th:href="@{'/funcionario/delete/'+${funcionario.id}}"><i class="fa fa-trash-alt cl-fa-delete"></i></a></i></td>
-                </tr>
-            </tbody>
-        </table>
+        <form th:object="${funcionario}"
+            th:action="@{/funcionario/save}" method="POST">
+            <div class="form-group row">
+                <label class="col-sm-2 col-form-label">Código</label>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" id="codigo" th:field="${funcionario.id}" readonly>
+                </div>    
+            </div>
+
+            <div class="form-group row">
+                <label class="col-sm-2 col-form-label">Nome</label>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" id="nome" th:field="${funcionario.nome}" required>
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <label class="col-sm-2 col-form-label">Cargo</label>
+                <div class="col-sm-10">
+                    <select class="form-control" th:field="${funcionario.cargo}" required>
+                        <option value="Contabilidade">Contabilidade</option>
+                        <option value="Financeiro">Financeiro</option>
+                        <option value="Gerente">Gerente</option>
+                        <option value="TI">TI</option>
+                        <option value="Vendedor">Vendedor</option>
+                    </select>
+                    
+                </div>    
+            </div>
+
+            <div class="form-group row">
+                <div class="col-sm-2"></div>
+                <div class="col-sm-5">
+                    <button type="button" class="btn btn-sm btn-light btn-controle"
+                        onclick="window.location.href='../list'">
+                        <i class="fa fa-ban"></i> Cancelar
+                    </button>
+                </div>
+                <div class="col-sm-5">
+                    <button type="submit" class="btn btn-sm btn-success btn-controle">
+                        <i class="fa fa-save"></i> Salvar
+                    </button>
+                </div>
+
+            </div>
+
+
+        </form>
         
     </div>
 
