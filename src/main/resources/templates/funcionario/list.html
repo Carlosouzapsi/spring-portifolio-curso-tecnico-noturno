@@ -51,26 +51,28 @@
             </button>
         </div>
         
-
-        <table class="table">
-            <thead class="table-dark">  
-                <tr>
-                    <th>Código</th>
-                    <th>Nome</th>
-                    <th colspan="4">Cargo</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr th:each="funcionario: ${funcionarios}">
-                    <td class="td-codigo" th:text="${funcionario.id}"></td>
-                    <td th:text="${funcionario.nome}"></td>
-                    <td th:text="${funcionario.cargo}"></td>
-                    <td class="td-btn"><a th:href="@{'/funcionario/view/'+${funcionario.id}}"><i class="fa fa-eye cl-fa"></i></a></i></td>
-                    <td class="td-btn"><a th:href="@{'/funcionario/edit/'+${funcionario.id}}"><i class="fa fa-edit cl-fa"></i></a></i></td>
-                    <td class="td-btn"><a th:href="@{'/funcionario/delete/'+${funcionario.id}}"><i class="fa fa-trash-alt cl-fa-delete"></i></a></i></td>
-                </tr>
-            </tbody>
-        </table>
+		<div class="div-tabela">
+		
+	        <table class="table">
+	            <thead class="table-dark">  
+	                <tr>
+	                    <th>Código</th>
+	                    <th>Nome</th>
+	                    <th colspan="4">Cargo</th>
+	                </tr>
+	            </thead>
+	            <tbody>
+	                <tr th:each="funcionario: ${funcionarios}">
+	                    <td class="td-codigo" th:text="${funcionario.id}"></td>
+	                    <td th:text="${funcionario.nome}"></td>
+	                    <td th:text="${funcionario.cargo}"></td>
+	                    <td class="td-btn"><a th:href="@{'/funcionario/view/'+${funcionario.id}}"><i class="fa fa-eye cl-fa"></i></a></i></td>
+	                    <td class="td-btn"><a th:href="@{'/funcionario/edit/'+${funcionario.id}}"><i class="fa fa-edit cl-fa"></i></a></i></td>
+	                    <td class="td-btn"><a th:href="@{'/funcionario/delete/'+${funcionario.id}}"><i class="fa fa-trash-alt cl-fa-delete"></i></a></i></td>
+	                </tr>
+	            </tbody>
+	        </table>
+        </div>
         
     </div>
 
