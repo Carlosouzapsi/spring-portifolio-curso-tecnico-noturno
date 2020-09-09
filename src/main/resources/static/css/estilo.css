@@ -28,7 +28,8 @@ footer{
 .container-funcionarios{
     margin-top:20px;
     margin-bottom:20px;
-    width: 300px;
+    width: 600px;
+    min-width: 300px;
     min-height: 500px;
     border: 1px solid #343a40;
     border-radius: 10px;
