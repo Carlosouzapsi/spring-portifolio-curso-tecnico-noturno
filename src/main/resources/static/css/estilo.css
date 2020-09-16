@@ -28,7 +28,7 @@ footer{
 .container-funcionarios{
     margin-top:20px;
     margin-bottom:20px;
-    width: 600px;
+    width: 90%;
     min-width: 300px;
     min-height: 500px;
     border: 1px solid #343a40;
@@ -38,7 +38,7 @@ footer{
 .container-projetos{
     margin-top:20px;
     margin-bottom:20px;
-    width: 90%;
+    
     min-height: 500px;
     border: 1px solid #343a40;
     border-radius: 10px;
@@ -112,8 +112,15 @@ select{
     color: #e7aaaa;
 }
 
-@media screen and (max-width:500px){
-    .div-tabela{
-        overflow-x: scroll;
-    }   
+.div-tabela{
+	overflow-x: scroll;
+}   
+
+.modal-header{
+	background-color: #b31f1f;
+	color: white;
+}
+
+.close{
+	color:white;
 }
