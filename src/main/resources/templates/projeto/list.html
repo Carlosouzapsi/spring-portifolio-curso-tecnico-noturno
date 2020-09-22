@@ -79,7 +79,8 @@
 	                    <td class="td-btn"><a th:href="@{'/projeto/view/'+${projeto.id}}"><i class="fa fa-eye cl-fa"></i></a></i></td>
 	                    <td class="td-btn"><a th:href="@{'/projeto/edit/'+${projeto.id}}"><i class="fa fa-edit cl-fa"></i></a></i></td>
 	                    <td class="td-btn">
-	                    	<button type="button" class="btn btn-outline-danger" th:onclick="|showModalDeletar(${projeto.id})|">
+	                    	<button type="button" class="btn btn-outline-danger" 
+	                    			th:onclick="|showModalDeletar(${projeto.id})|">
 	                    		<i class="fa fa-trash-alt cl-fa-delete"></i>
 	                    	</button>
 	                    </td>
