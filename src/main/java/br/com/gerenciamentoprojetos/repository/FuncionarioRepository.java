@@ -9,5 +9,6 @@ import br.com.gerenciamentoprojetos.model.Funcionario;
 public interface FuncionarioRepository extends JpaRepository<Funcionario, Long>{
 
 	public List findByCargo(String cargo);
+	public List findByCargoNot(String cargo);
 
 }

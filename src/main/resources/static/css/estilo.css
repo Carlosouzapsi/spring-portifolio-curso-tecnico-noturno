@@ -124,3 +124,11 @@ select{
 .close{
 	color:white;
 }
+
+.cl-dark{
+	color:white
+}
+
+.list-group-item{
+	text-align: center;
+}

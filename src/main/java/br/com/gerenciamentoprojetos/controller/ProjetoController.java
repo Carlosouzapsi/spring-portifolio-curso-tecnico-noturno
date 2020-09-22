@@ -34,7 +34,8 @@ public class ProjetoController {
 		try {
 			  
 			model.addAttribute("projeto", new Projeto());
-			model.addAttribute("funcionarios", funcionarioRepository.findByCargo("Gerente"));
+			model.addAttribute("gerentes", funcionarioRepository.findByCargo("Gerente"));
+			model.addAttribute("funcionarios", funcionarioRepository.findByCargoNot("Gerente"));
 		} catch (Exception e) {
 			System.out.println("Erro: " + e.getMessage());
 		}
