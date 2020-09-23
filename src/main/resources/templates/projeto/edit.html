@@ -129,13 +129,32 @@
                 <label class="col-sm-2 col-form-label">Gerente</label>
                 <div class="col-sm-10">
                     <select th:field="${projeto.gerente.id}" required class="form-control">
-                        <option th:each="funcionario : ${funcionarios}" th:value="${funcionario.id}"
-                            th:text="${funcionario.nome}"
+                        <option th:each="gerente : ${gerentes}" th:value="${gerente.id}"
+                            th:text="${gerente.nome}"
                         ></option>
                     </select>
                 </div>    
             </div>
-
+            
+            <div class="form-group row">
+            
+                <div class="col-sm-2"></div>
+                <div class="col-sm-10">
+                	<ul class="list-group">
+	            		<li class="list-group-item bg-dark cl-dark">Funcionários</li>
+	            	</ul>		
+                	
+                    <select th:field="*{funcionarios}" required 
+                    	class="form-control" multiple="multiple">
+                    	
+                        <option th:each="pf : ${funcionarios}" th:value="${pf.id}"
+                            th:text="${pf}"
+                        ></option>
+                        
+                    </select>
+                </div>    
+            </div>
+            
             <div class="form-group row">
                 <div class="col-sm-2"></div>
                 <div class="col-sm-5">

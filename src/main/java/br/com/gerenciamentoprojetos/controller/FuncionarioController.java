@@ -60,14 +60,8 @@ public class FuncionarioController {
 	
 	@GetMapping("/funcionario/delete/{id}")
 	public String deleteFuncionario(@PathVariable long id, Model model) {
-		model.addAttribute("funcionario", funcionarioRepository.findById(id));
-		return "funcionario/delete";
-	}
-	
-	@PostMapping("/funcionario/delete")
-	public String deleteFuncionario(Funcionario funcionario) {
 		try {
-			funcionarioRepository.delete(funcionario);
+			funcionarioRepository.deleteById(id);
 		}catch (Exception e) {
 			System.out.println("Erro: " + e.getMessage());
 		}

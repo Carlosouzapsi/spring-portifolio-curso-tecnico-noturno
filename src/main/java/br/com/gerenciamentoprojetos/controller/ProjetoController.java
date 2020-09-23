@@ -64,8 +64,10 @@ public class ProjetoController {
 	
 	@GetMapping("/projeto/edit/{id}")
 	public String editProjeto(@PathVariable long id, Model model) {
+		
 		model.addAttribute("projeto", projetoRepository.findById(id));
-		model.addAttribute("funcionarios", funcionarioRepository.findByCargo("Gerente"));
+		model.addAttribute("gerentes", funcionarioRepository.findByCargo("Gerente"));
+		model.addAttribute("funcionarios", funcionarioRepository.findByCargoNot("Gerente"));
 		return "projeto/edit";
 		
 	}

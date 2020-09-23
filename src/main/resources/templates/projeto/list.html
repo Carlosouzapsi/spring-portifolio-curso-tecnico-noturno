@@ -107,13 +107,13 @@
 		        
 		        	<!-- Modal footer -->
 		        	<div class="modal-footer">
-		        		<input type="text" id="produtoid" hidden>
+		        		<input type="text" id="id_deletar" hidden>
 		        		<button type="button" class="btn btn-outline-dark" data-dismiss="modal">
 		        			<i class="fa fa-ban"></i> Voltar
 						</button>
 						
 		          		<button type="button" class="btn btn-danger btn-modal-footer" data-dismiss="modal"
-		          				th:onclick="deletarProjeto()">
+		          				th:onclick="deletar('projeto')">
 		          			<i class="fa fa-trash"> </i> Deletar
 						</button>
 						

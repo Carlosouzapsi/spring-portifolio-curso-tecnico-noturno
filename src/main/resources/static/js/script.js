@@ -1,10 +1,11 @@
 const showModalDeletar = function(id){
-	$('#produtoid').val(id)	
+	$('#id_deletar').val(id)	
 	$('#deleteModal').modal('show')
 }
 
-const deletarProjeto = function(){
-	let produtoid = $('#produtoid').val()
-	if (produtoid != 0)
-		window.location.href = '/projeto/delete/' + produtoid
+const deletar = function(nome){
+	let id = $('#id_deletar').val()
+	if (id != 0)
+		window.location.href = '/' + nome + '/delete/' + id
 }
+
