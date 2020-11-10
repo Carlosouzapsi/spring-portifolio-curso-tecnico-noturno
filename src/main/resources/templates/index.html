@@ -32,15 +32,27 @@
                 <li class="nav-item">
                     <a class="nav-link" th:href="@{/funcionario/list}">Funcionários</a>
                 </li>
+                <li class="nav-item">
+                    <a class="nav-link" th:href="@{/usuario/edit}">Usuário</a>
+                </li>
+            </ul>
+            <!-- LOGIN -->
+            <ul class="navbar-nav">
+            	<li class="nav-item active">
+            		<a th:href="@{/login}" class="nav-link">
+            			 Entrar  <i class="fas fa-sign-in-alt"></i>
+					</a>
+            	</li>
             </ul>
         </div>
     </nav>
 
 
     <!--CONTEÚDO-->
-    <div class="container container-principal">
-        
+   	<div class="container container-principal">
+        <img class="img-central" alt="projetos" th:src="@{/img/projetos.jpg}">
     </div>
+
 
     <div class="contato">
         <div class="container">

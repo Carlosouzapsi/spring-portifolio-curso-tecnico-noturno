@@ -1,5 +1,6 @@
 .container-principal{
-    height: 600px;
+    margin-top:60px;
+    margin-bottom:60px;
 }
 
 .contato{
@@ -76,6 +77,15 @@ footer{
     max-width: 400px;
 }
 
+.container-login{
+    margin-top: 165px;
+    margin-bottom: 290px;
+    border: 1px solid #343a40;
+    border-radius: 10px;
+    padding: 10px;
+    max-width: 400px;
+}
+
 .container-projeto{
     margin-top: 15px;
     margin-bottom: 15px;
@@ -131,4 +141,17 @@ select{
 
 .list-group-item{
 	text-align: center;
+}
+
+.input-login{
+	margin-bottom: 10px;
+}
+
+.label-login{
+	margin-lert: 15px;
+	margin-top: 15px;
+}
+
+.img-central{
+	width: 100%;
 }

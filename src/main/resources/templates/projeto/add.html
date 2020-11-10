@@ -32,7 +32,15 @@
                 <li class="nav-item">
                     <a class="nav-link " th:href="@{/funcionario/list}">Funcionários</a>
                 </li>
+                <li class="nav-item">
+                    <a class="nav-link " th:href="@{/usuario/edit}">Usuário</a>
+                </li>
             </ul>
+            <form th:action="@{/logout}" class="form-inline my-2 my-lg-0" method="post">
+            	<button type="submit" class="btn btn-dark">
+            		Sair <i class="fas fa-sign-out-alt"></i>
+            	</button>
+            </form>
         </div>
     </nav>
 

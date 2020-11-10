@@ -10,11 +10,16 @@ import javax.persistence.JoinColumn;
 import javax.persistence.JoinColumns;
 import javax.persistence.JoinTable;
 import javax.persistence.ManyToMany;
+import javax.persistence.Table;
+import javax.persistence.UniqueConstraint;
 import javax.validation.constraints.Size;
 
 import org.springframework.lang.NonNull;
 
 @Entity(name="usuario")
+@Table(uniqueConstraints = {
+		@UniqueConstraint(columnNames = "login", name = "uniquelogin")
+})
 public class Usuario {
 	
 	@Id
@@ -27,6 +32,7 @@ public class Usuario {
 	
 	@NonNull
 	@Size(max=80)
+	
 	private String login;
 	
 	@NonNull
